@@ -101,27 +101,30 @@
 	<div id="side">
 
 		<section>
+			<?php $args = array(
+				'orderby' => 'date',
+				'order' => 'DESC',
+				'tag' => 'recommend',
+			);
+			$posts = get_posts($args);
+			if ($posts) : ?>
 
-			<h2>管理者おすすめサイト</h2>
-
-			<div class="list-sub">
-				<a href="#" target="_blank">
-					<p class="img"><img src="<?php echo get_template_directory_uri(); ?>/images/sample_yahoo.jpg" alt=""></p>
-					<h4>タイトル</h4>
-					<p>ここに簡単な説明を入れます。サンプルテキスト。</p>
-					<span class="new">new</span>
-				</a>
-			</div>
-
-			<div class="list-sub">
-				<a href="#" target="_blank">
-					<p class="img"><img src="<?php echo get_template_directory_uri(); ?>/images/sample_amazon.jpg" alt=""></p>
-					<h4>タイトル</h4>
-					<p>ここに簡単な説明を入れます。サンプルテキスト。</p>
-					<span class="new">new</span>
-				</a>
-			</div>
-
+				<h2>管理者おすす情報</h2>
+				<?php
+					foreach ($posts as $post) :
+						setup_postdata($post)
+						?>
+					<div class="list-sub">
+						<a href="<?php the_permalink(); ?>" target="_blank">
+							<p class="img"><img src="<?php echo get_template_directory_uri(); ?>/images/sample_yahoo.jpg" alt=""></p>
+							<h4><?php the_title(); ?></h4>
+							<p><?php the_excerpt(); ?></p>
+							<span class="new">new</span>
+						</a>
+					</div>
+				<?php endforeach; ?>
+			<?php endif;
+			wp_reset_postdata(); ?>
 		</section>
 
 		<section>
