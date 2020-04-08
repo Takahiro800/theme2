@@ -7,11 +7,11 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="description" content="ここにサイト説明を入れます">
 <meta name="keywords" content="キーワード１,キーワード２,キーワード３,キーワード４,キーワード５">
-<link rel="stylesheet" href="css/style.css">
-<script src="js/openclose.js"></script>
-<script src="js/fixmenu.js"></script>
-<script src="js/fixmenu_pagetop.js"></script>
-<script src="js/ddmenu_min.js"></script>
+<link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/css/style.css">
+<script src="<?php echo get_template_directory_uri(); ?>/js/openclose.js"></script>
+<script src="<?php echo get_template_directory_uri(); ?>/js/fixmenu.js"></script>
+<script src="<?php echo get_template_directory_uri(); ?>/js/fixmenu_pagetop.js"></script>
+<script src="<?php echo get_template_directory_uri(); ?>/js/ddmenu_min.js"></script>
 <!--[if lt IE 9]>
 <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
 <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
@@ -22,30 +22,30 @@
 
 <header>
 <div class="inner">
-<h1 id="logo"><a href="index.html"><img src="images/logo.png" alt="ポータルサイト"></a></h1>
-<p class="login"><a href="login.html">ログイン</a></p>
+<h1 id="logo"><a href="<?php echo get_template_directory_uri(); ?>/index.php"><img src="<?php echo get_template_directory_uri(); ?>/images/logo.png" alt="ポータルサイト"></a></h1>
+<p class="login"><a href="<?php echo get_template_directory_uri(); ?>/login.html">ログイン</a></p>
 </div>
 </header>
 
 <!--PC用（901px以上端末）メニュー-->
 <nav id="menubar" class="nav-fix-pos">
 <ul class="inner">
-<li><a href="index.html">ホーム<span>Home</span></a></li>
-<li><a href="list_base.html">情報一覧<span>Category</span></a>
+<li><a href="<?php echo get_template_directory_uri(); ?>/index.html">ホーム<span>Home</span></a></li>
+<li><a href="<?php echo get_template_directory_uri(); ?>/list_base.html">情報一覧<span>Category</span></a>
 <ul class="ddmenu">
-<li><a href="list_foods.html">飲食店を探す</a></li>
-<li><a href="list_job.html">求人を探す</a></li>
-<li><a href="list_clinic.html">病院を探す</a></li>
-<li><a href="list_school.html">習い事を探す</a></li>
+<li><a href="<?php echo get_template_directory_uri(); ?>/list_foods.html">飲食店を探す</a></li>
+<li><a href="<?php echo get_template_directory_uri(); ?>/list_job.html">求人を探す</a></li>
+<li><a href="<?php echo get_template_directory_uri(); ?>/list_clinic.html">病院を探す</a></li>
+<li><a href="<?php echo get_template_directory_uri(); ?>/list_school.html">習い事を探す</a></li>
 <li class="title"><a href="#">不動産情報</a></li>
-<li><a href="list_fudosan.html">売買物件を探す</a></li>
-<li><a href="list_fudosan_chintai.html">賃貸物件を探す</a></li>
+<li><a href="<?php echo get_template_directory_uri(); ?>/list_fudosan.html">売買物件を探す</a></li>
+<li><a href="<?php echo get_template_directory_uri(); ?>/list_fudosan_chintai.html">賃貸物件を探す</a></li>
 </ul>
 </li>
-<li><a href="info.html">掲載のご案内<span>Information</span></a></li>
-<li><a href="faq.html">よく頂く質問<span>Faq</span></a></li>
-<li><a href="link.html">リンク<span>Link</span></a></li>
-<li><a href="contact.html">お問い合わせ<span>Contact</span></a></li>
+<li><a href="<?php echo get_template_directory_uri(); ?>/info.html">掲載のご案内<span>Information</span></a></li>
+<li><a href="<?php echo get_template_directory_uri(); ?>/faq.html">よく頂く質問<span>Faq</span></a></li>
+<li><a href="<?php echo get_template_directory_uri(); ?>/link.html">リンク<span>Link</span></a></li>
+<li><a href="<?php echo get_template_directory_uri(); ?>/contact.html">お問い合わせ<span>Contact</span></a></li>
 </ul>
 </nav>
 <!--小さな端末用（900px以下端末）メニュー-->
@@ -107,23 +107,23 @@
 <section>
 <h2>ポータルサイト向けCMS販売中<span>CMS</span></h2>
 <p>複数のユーザーが情報を登録し、訪問客がそれを閲覧するポータルサイト向けCMS販売中です。<br>
-<a href="https://template-party.com/portal_db/"><img src="https://template-party.com/portal_db/images/img01.jpg" alt=""></a></p>
+<a href="https://template-party.com/portal_db/"><img src="<?php echo get_template_directory_uri(); ?>/https://template-party.com/portal_db/images/img01.jpg" alt=""></a></p>
 </section>
 
 <section>
 
 <h2>地域の情報検索サイト</h2>
 <ul class="list2">
-<li><a href="list_foods.html"><img src="images/mark_foods.png" alt="" class="img">飲食店を調べる<br><span>XX件</span></a></li>
-<li><a href="list_job.html"><img src="images/mark_job.png" alt="" class="img">求人情報を探す<br><span>XX件</span></a></li>
-<li><a href="list_clinic.html"><img src="images/mark_clinic.png" alt="" class="img">病院を探す<br><span>XX件</span></a></li>
-<li><a href="list_scool.html"><img src="images/mark_school.png" alt="" class="img">習い事を探す<br><span>XX件</span></a></li>
+<li><a href="list_foods.html"><img src="<?php echo get_template_directory_uri(); ?>/images/mark_foods.png" alt="" class="img">飲食店を調べる<br><span>XX件</span></a></li>
+<li><a href="list_job.html"><img src="<?php echo get_template_directory_uri(); ?>/images/mark_job.png" alt="" class="img">求人情報を探す<br><span>XX件</span></a></li>
+<li><a href="list_clinic.html"><img src="<?php echo get_template_directory_uri(); ?>/images/mark_clinic.png" alt="" class="img">病院を探す<br><span>XX件</span></a></li>
+<li><a href="list_scool.html"><img src="<?php echo get_template_directory_uri(); ?>/images/mark_school.png" alt="" class="img">習い事を探す<br><span>XX件</span></a></li>
 </ul>
 
 <h2>地域の不動産情報</h2>
 <ul class="list2">
-<li><a href="list_fudosan.html"><img src="images/mark_fudosan.png" alt="" class="img">不動産情報（売買）<br><span>XX件</span></a></li>
-<li><a href="list_chintai.html"><img src="images/mark_fudosan.png" alt="" class="img">不動産情報（賃貸）<br><span>XX件</span></a></li>
+<li><a href="list_fudosan.html"><img src="<?php echo get_template_directory_uri(); ?>/images/mark_fudosan.png" alt="" class="img">不動産情報（売買）<br><span>XX件</span></a></li>
+<li><a href="list_chintai.html"><img src="<?php echo get_template_directory_uri(); ?>/images/mark_fudosan.png" alt="" class="img">不動産情報（賃貸）<br><span>XX件</span></a></li>
 </ul>
 
 </section>
@@ -160,28 +160,28 @@
 <h3>売買物件</h3>
 
 <div class="list-compact">
-<p class="img"><a href="item.html"><img src="images/sample_fudosan1.jpg" alt=""></a></p>
+<p class="img"><a href="item.html"><img src="<?php echo get_template_directory_uri(); ?>/images/sample_fudosan1.jpg" alt=""></a></p>
 <h4><a href="item.html">タイトル</a></h4>
 <p>ここに簡単な説明を入れます。サンプルテキスト。</p>
 <p class="name"><a href="item.html">サンプル不動産</a></p>
 </div>
 
 <div class="list-compact">
-<p class="img"><a href="item.html"><img src="images/sample_fudosan1.jpg" alt=""></a></p>
+<p class="img"><a href="item.html"><img src="<?php echo get_template_directory_uri(); ?>/images/sample_fudosan1.jpg" alt=""></a></p>
 <h4><a href="item.html">タイトル</a></h4>
 <p>ここに簡単な説明を入れます。サンプルテキスト。</p>
 <p class="name"><a href="item.html">サンプル不動産</a></p>
 </div>
 
 <div class="list-compact">
-<p class="img"><a href="item.html"><img src="images/sample_fudosan1.jpg" alt=""></a></p>
+<p class="img"><a href="item.html"><img src="<?php echo get_template_directory_uri(); ?>/images/sample_fudosan1.jpg" alt=""></a></p>
 <h4><a href="item.html">タイトル</a></h4>
 <p>ここに簡単な説明を入れます。サンプルテキスト。</p>
 <p class="name"><a href="item.html">サンプル不動産</a></p>
 </div>
 
 <div class="list-compact">
-<p class="img"><a href="item.html"><img src="images/sample_fudosan1.jpg" alt=""></a></p>
+<p class="img"><a href="item.html"><img src="<?php echo get_template_directory_uri(); ?>/images/sample_fudosan1.jpg" alt=""></a></p>
 <h4><a href="item.html">タイトル</a></h4>
 <p>ここに簡単な説明を入れます。サンプルテキスト。</p>
 <p class="name"><a href="item.html">サンプル不動産</a></p>
@@ -190,28 +190,28 @@
 <h3>賃貸物件</h3>
 
 <div class="list-compact">
-<p class="img"><a href="item.html"><img src="images/sample_fudosan2.jpg" alt=""></a></p>
+<p class="img"><a href="item.html"><img src="<?php echo get_template_directory_uri(); ?>/images/sample_fudosan2.jpg" alt=""></a></p>
 <h4><a href="item.html">タイトル</a></h4>
 <p>ここに簡単な説明を入れます。サンプルテキスト。</p>
 <p class="name"><a href="item.html">サンプル不動産</a></p>
 </div>
 
 <div class="list-compact">
-<p class="img"><a href="item.html"><img src="images/sample_fudosan2.jpg" alt=""></a></p>
+<p class="img"><a href="item.html"><img src="<?php echo get_template_directory_uri(); ?>/images/sample_fudosan2.jpg" alt=""></a></p>
 <h4><a href="item.html">タイトル</a></h4>
 <p>ここに簡単な説明を入れます。サンプルテキスト。</p>
 <p class="name"><a href="item.html">サンプル不動産</a></p>
 </div>
 
 <div class="list-compact">
-<p class="img"><a href="item.html"><img src="images/sample_fudosan2.jpg" alt=""></a></p>
+<p class="img"><a href="item.html"><img src="<?php echo get_template_directory_uri(); ?>/images/sample_fudosan2.jpg" alt=""></a></p>
 <h4><a href="item.html">タイトル</a></h4>
 <p>ここに簡単な説明を入れます。サンプルテキスト。</p>
 <p class="name"><a href="item.html">サンプル不動産</a></p>
 </div>
 
 <div class="list-compact">
-<p class="img"><a href="item.html"><img src="images/sample_fudosan2.jpg" alt=""></a></p>
+<p class="img"><a href="item.html"><img src="<?php echo get_template_directory_uri(); ?>/images/sample_fudosan2.jpg" alt=""></a></p>
 <h4><a href="item.html">タイトル</a></h4>
 <p>ここに簡単な説明を入れます。サンプルテキスト。</p>
 <p class="name"><a href="item.html">サンプル不動産</a></p>
@@ -299,8 +299,8 @@ TEL：00-0000-0000<br>
 </div>
 
 <p>
-<a href="recruit.html"><img src="images/banner1.jpg" alt="採用情報" class="pc"></a>
-<a href="recruit.html"><img src="images/banner1_sh.jpg" alt="採用情報" class="sh"></a>
+<a href="recruit.html"><img src="<?php echo get_template_directory_uri(); ?>/images/banner1.jpg" alt="採用情報" class="pc"></a>
+<a href="recruit.html"><img src="<?php echo get_template_directory_uri(); ?>/images/banner1_sh.jpg" alt="採用情報" class="sh"></a>
 </p>
 <p>上のバナー画像は、901px以上の端末と900px以下とで画像２種類が切り替わります。<br>
 <a href="company.html#banner">詳しい説明はこちら。</a></p>
@@ -319,7 +319,7 @@ TEL：00-0000-0000<br>
 
 <div class="list-sub">
 <a href="#" target="_blank">
-<p class="img"><img src="images/sample_yahoo.jpg" alt=""></p>
+<p class="img"><img src="<?php echo get_template_directory_uri(); ?>/images/sample_yahoo.jpg" alt=""></p>
 <h4>タイトル</h4>
 <p>ここに簡単な説明を入れます。サンプルテキスト。</p>
 <span class="new">new</span>
@@ -328,7 +328,7 @@ TEL：00-0000-0000<br>
 
 <div class="list-sub">
 <a href="#" target="_blank">
-<p class="img"><img src="images/sample_amazon.jpg" alt=""></p>
+<p class="img"><img src="<?php echo get_template_directory_uri(); ?>/images/sample_amazon.jpg" alt=""></p>
 <h4>タイトル</h4>
 <p>ここに簡単な説明を入れます。サンプルテキスト。</p>
 <span class="new">new</span>
@@ -343,7 +343,7 @@ TEL：00-0000-0000<br>
 
 <div class="list-sub">
 <a href="#">
-<p class="img t"><img src="images/sample_side1.jpg" alt="タイトル"></p>
+<p class="img t"><img src="<?php echo get_template_directory_uri(); ?>/images/sample_side1.jpg" alt="タイトル"></p>
 <h4>アルバイト募集！</h4>
 <p>ここに簡単な説明を入れます。サンプルテキスト。</p>
 <p class="name">サンプルカフェ</p>
@@ -352,7 +352,7 @@ TEL：00-0000-0000<br>
 
 <div class="list-sub">
 <a href="#">
-<p class="img t"><img src="images/sample_side2.png" alt="タイトル"></p>
+<p class="img t"><img src="<?php echo get_template_directory_uri(); ?>/images/sample_side2.png" alt="タイトル"></p>
 <h4>医療スタッフ募集</h4>
 <p>ここに簡単な説明を入れます。サンプルテキスト。</p>
 <p class="name">サンプルクリニック</p>
@@ -361,7 +361,7 @@ TEL：00-0000-0000<br>
 
 <div class="list-sub">
 <a href="#">
-<p class="img t"><img src="images/sample_side3.jpg" alt="タイトル"></p>
+<p class="img t"><img src="<?php echo get_template_directory_uri(); ?>/images/sample_side3.jpg" alt="タイトル"></p>
 <h4>Cafeオープン記念</h4>
 <p>ここに簡単な説明を入れます。サンプルテキスト。</p>
 <p class="name">サンプルCafe</p>
@@ -370,7 +370,7 @@ TEL：00-0000-0000<br>
 
 <div class="list-sub">
 <a href="#">
-<p class="img t"><img src="images/sample_side1.jpg" alt="タイトル"></p>
+<p class="img t"><img src="<?php echo get_template_directory_uri(); ?>/images/sample_side1.jpg" alt="タイトル"></p>
 <h4>アルバイト募集！</h4>
 <p>ここに簡単な説明を入れます。サンプルテキスト。</p>
 <p class="name">サンプルカフェ</p>
@@ -379,7 +379,7 @@ TEL：00-0000-0000<br>
 
 <div class="list-sub">
 <a href="#">
-<p class="img t"><img src="images/sample_side2.png" alt="タイトル"></p>
+<p class="img t"><img src="<?php echo get_template_directory_uri(); ?>/images/sample_side2.png" alt="タイトル"></p>
 <h4>医療スタッフ募集</h4>
 <p>ここに簡単な説明を入れます。サンプルテキスト。</p>
 <p class="name">サンプルクリニック</p>
@@ -388,7 +388,7 @@ TEL：00-0000-0000<br>
 
 <div class="list-sub">
 <a href="#">
-<p class="img t"><img src="images/sample_side3.jpg" alt="タイトル"></p>
+<p class="img t"><img src="<?php echo get_template_directory_uri(); ?>/images/sample_side3.jpg" alt="タイトル"></p>
 <h4>Cafeオープン記念</h4>
 <p>ここに簡単な説明を入れます。サンプルテキスト。</p>
 <p class="name">サンプルCafe</p>
