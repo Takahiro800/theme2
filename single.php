@@ -56,8 +56,8 @@
 					</div>
 
 					<p>
-						<a href="recruit.html"><img src="images/banner1.jpg" alt="採用情報" class="pc"></a>
-						<a href="recruit.html"><img src="images/banner1_sh.jpg" alt="採用情報" class="sh"></a>
+						<a href="recruit.html"><img src="<?php echo get_template_directory_uri(); ?>/images/banner1.jpg" alt="採用情報" class="pc"></a>
+						<a href="recruit.html"><img src="<?php echo get_template_directory_uri(); ?>/images/banner1_sh.jpg" alt="採用情報" class="sh"></a>
 					</p>
 					<p>上のバナー画像は、901px以上の端末と900px以下とで画像２種類が切り替わります。<br>
 						<a href="company.html#banner">詳しい説明はこちら。</a></p>
@@ -76,7 +76,7 @@
 
 					<div class="list-sub">
 						<a href="#" target="_blank">
-							<p class="img"><img src="images/sample_yahoo.jpg" alt=""></p>
+							<p class="img"><img src="<?php echo get_template_directory_uri(); ?>/images/sample_yahoo.jpg" alt=""></p>
 							<h4>タイトル</h4>
 							<p>ここに簡単な説明を入れます。サンプルテキスト。</p>
 							<span class="new">new</span>
@@ -85,7 +85,7 @@
 
 					<div class="list-sub">
 						<a href="#" target="_blank">
-							<p class="img"><img src="images/sample_amazon.jpg" alt=""></p>
+							<p class="img"><img src="<?php echo get_template_directory_uri(); ?>/images/sample_amazon.jpg" alt=""></p>
 							<h4>タイトル</h4>
 							<p>ここに簡単な説明を入れます。サンプルテキスト。</p>
 							<span class="new">new</span>
@@ -100,7 +100,7 @@
 
 					<div class="list-sub">
 						<a href="#">
-							<p class="img t"><img src="images/sample_side1.jpg" alt="タイトル"></p>
+							<p class="img t"><img src="<?php echo get_template_directory_uri(); ?>/images/sample_side1.jpg" alt="タイトル"></p>
 							<h4>アルバイト募集！</h4>
 							<p>ここに簡単な説明を入れます。サンプルテキスト。</p>
 							<p class="name">サンプルカフェ</p>
@@ -109,7 +109,7 @@
 
 					<div class="list-sub">
 						<a href="#">
-							<p class="img t"><img src="images/sample_side2.png" alt="タイトル"></p>
+							<p class="img t"><img src="<?php echo get_template_directory_uri(); ?>/images/sample_side2.png" alt="タイトル"></p>
 							<h4>医療スタッフ募集</h4>
 							<p>ここに簡単な説明を入れます。サンプルテキスト。</p>
 							<p class="name">サンプルクリニック</p>
@@ -118,7 +118,7 @@
 
 					<div class="list-sub">
 						<a href="#">
-							<p class="img t"><img src="images/sample_side3.jpg" alt="タイトル"></p>
+							<p class="img t"><img src="<?php echo get_template_directory_uri(); ?>/images/sample_side3.jpg" alt="タイトル"></p>
 							<h4>Cafeオープン記念</h4>
 							<p>ここに簡単な説明を入れます。サンプルテキスト。</p>
 							<p class="name">サンプルCafe</p>
@@ -127,7 +127,7 @@
 
 					<div class="list-sub">
 						<a href="#">
-							<p class="img t"><img src="images/sample_side1.jpg" alt="タイトル"></p>
+							<p class="img t"><img src="<?php echo get_template_directory_uri(); ?>/images/sample_side1.jpg" alt="タイトル"></p>
 							<h4>アルバイト募集！</h4>
 							<p>ここに簡単な説明を入れます。サンプルテキスト。</p>
 							<p class="name">サンプルカフェ</p>
@@ -136,7 +136,7 @@
 
 					<div class="list-sub">
 						<a href="#">
-							<p class="img t"><img src="images/sample_side2.png" alt="タイトル"></p>
+							<p class="img t"><img src="<?php echo get_template_directory_uri(); ?>/images/sample_side2.png" alt="タイトル"></p>
 							<h4>医療スタッフ募集</h4>
 							<p>ここに簡単な説明を入れます。サンプルテキスト。</p>
 							<p class="name">サンプルクリニック</p>
@@ -145,7 +145,7 @@
 
 					<div class="list-sub">
 						<a href="#">
-							<p class="img t"><img src="images/sample_side3.jpg" alt="タイトル"></p>
+							<p class="img t"><img src="<?php echo get_template_directory_uri(); ?>/images/sample_side3.jpg" alt="タイトル"></p>
 							<h4>Cafeオープン記念</h4>
 							<p>ここに簡単な説明を入れます。サンプルテキスト。</p>
 							<p class="name">サンプルCafe</p>
