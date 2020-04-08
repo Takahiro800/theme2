@@ -115,6 +115,7 @@
 					<?php
 					$args = array(
 						'title_li' => '',
+						'exclude' => '6',
 					);
 					wp_list_categories($args); ?>
 				</ul>
@@ -123,8 +124,12 @@
 			<nav>
 				<h2>不動産情報</h2>
 				<ul class="submenu">
-					<li><a href="list_fudosan.html">売買物件を探す</a></li>
-					<li><a href="list_fudosan_chintai.html">賃貸物件を探す</a></li>
+					<?php
+					$args = array(
+						'title_li' => '',
+						'exclude' => '1,2,3,4,5,'
+					);
+					wp_list_categories($args); ?>
 				</ul>
 			</nav>
 
