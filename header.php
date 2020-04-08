@@ -26,6 +26,7 @@
       <h1 id="logo"><a href="<?php echo get_template_directory_uri(); ?>/index.php"><img src="<?php echo get_template_directory_uri(); ?>/images/logo.png" alt="ポータルサイト"></a></h1>
       <p class="login"><a href="<?php echo get_template_directory_uri(); ?>/login.html">ログイン</a></p>
     </div>
+    <?php wp_head(); ?>
   </header>
 
   <!--PC用（901px以上端末）メニュー-->
