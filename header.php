@@ -19,7 +19,9 @@
 <![endif]-->
 </head>
 
-<body>
+<body <?php body_class(); ?>>
+  <?php wp_body_open(); ?>
+
 
   <header>
     <div class="inner">
