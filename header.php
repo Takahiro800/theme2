@@ -37,13 +37,11 @@
       <li><a href="<?php echo get_template_directory_uri(); ?>/index.html">ホーム<span>Home</span></a></li>
       <li><a href="<?php echo get_template_directory_uri(); ?>/list_base.html">情報一覧<span>Category</span></a>
         <ul class="ddmenu">
-          <li><a href="<?php echo get_template_directory_uri(); ?>/list_foods.html">飲食店を探す</a></li>
-          <li><a href="<?php echo get_template_directory_uri(); ?>/list_job.html">求人を探す</a></li>
-          <li><a href="<?php echo get_template_directory_uri(); ?>/list_clinic.html">病院を探す</a></li>
-          <li><a href="<?php echo get_template_directory_uri(); ?>/list_school.html">習い事を探す</a></li>
-          <li class="title"><a href="#">不動産情報</a></li>
-          <li><a href="<?php echo get_template_directory_uri(); ?>/list_fudosan.html">売買物件を探す</a></li>
-          <li><a href="<?php echo get_template_directory_uri(); ?>/list_fudosan_chintai.html">賃貸物件を探す</a></li>
+        <?php
+					$args = array(
+						'title_li' => '',
+					);
+					wp_list_categories($args); ?>
         </ul>
       </li>
       <li><a href="<?php echo get_template_directory_uri(); ?>/info.html">掲載のご案内<span>Information</span></a></li>
