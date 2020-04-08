@@ -112,10 +112,11 @@
 			<nav>
 				<h2>情報一覧</h2>
 				<ul class="submenu">
-					<li><a href="list_foods.html">飲食店を探す</a></li>
-					<li><a href="list_job.html">求人を探す</a></li>
-					<li><a href="list_clinic.html">病院を探す</a></li>
-					<li><a href="list_school.html">習い事を探す</a></li>
+					<?php
+					$args = array(
+						'title_li' => '',
+					);
+					wp_list_categories($args); ?>
 				</ul>
 			</nav>
 
