@@ -8,99 +8,43 @@
 
 			<section>
 
-				<h2>飲食店を探す</h2>
+				<h2><?php echo the_category(); ?></h2>
+				<?php if (have_posts()) : ?>
+					<?php while (have_posts()) : the_post(); ?>
+
+						<div class="list">
+
+							<p class="img"><a href="<?php the_permalink(); ?>"><img src="<?php echo get_template_directory_uri(); ?>/images/sample_foods1.jpg" alt="タイトル"></a></p>
+
+							<div class="text">
+
+								<h4><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a><span class="newicon">NEW</span></h4>
+
+								<p class="mb10"><?php the_excerpt(); ?></p>
+
+								<p class="mini1 color2">東京都品川区XXXX</p>
+
+								<span class="icon"><a href="#">全室禁煙</a></span>
+								<span class="icon"><a href="#">ご予約可</a></span>
+								<span class="icon"><a href="#">駐車場あり</a></span>
+
+								<p><a href="<?php the_permalink(); ?>" class="btn2">詳細をみる</a></p>
+
+							</div>
+							<!--/.text-->
+
+							<p class="date"><span>■登録日:2019/03/03 20:18</span><span>■更新日:2019/03/14 10:37</span></p>
+
+							<p class="name"><a href="item.html">サンプル飲食店</a></p>
+							<!--{/def}-->
+
+						</div>
+						<!--/.list-->
+					<?php endwhile; ?>
+				<?php endif; ?>
 
 
-				<div class="list">
 
-					<p class="img"><a href="item.html"><img src="<?php echo get_template_directory_uri(); ?>/images/sample_foods1.jpg" alt="タイトル"></a></p>
-
-					<div class="text">
-
-						<h4><a href="item.html">タイトル</a><span class="newicon">NEW</span></h4>
-
-						<p class="mb10">ここに説明を入れます。サンプルテキスト。</p>
-
-						<p class="mini1 color2">東京都品川区XXXX</p>
-
-						<span class="icon"><a href="#">全室禁煙</a></span>
-						<span class="icon"><a href="#">ご予約可</a></span>
-						<span class="icon"><a href="#">駐車場あり</a></span>
-
-						<p><a href="item.html" class="btn2">詳細をみる</a></p>
-
-					</div>
-					<!--/.text-->
-
-					<p class="date"><span>■登録日:2019/03/03 20:18</span><span>■更新日:2019/03/14 10:37</span></p>
-
-					<p class="name"><a href="item.html">サンプル飲食店</a></p>
-					<!--{/def}-->
-
-				</div>
-				<!--/.list-->
-
-				<div class="list">
-
-					<p class="img"><a href="item.html"><img src="<?php echo get_template_directory_uri(); ?>/images/sample_foods1.jpg" alt="タイトル"></a></p>
-
-					<div class="text">
-
-						<h4><a href="item.html">タイトル</a><span class="option1">option1</span></h4>
-
-						<p class="mb10">右上の「option1」の文字情報はhtml側で直接変更できます。<br>
-							<span style="color:red">&lt;span class=&quot;option1&quot;&gt;option1&lt;/span&gt;</span><br>
-							色はcssフォルダのstyle.cssの設定で変更できます。</p>
-
-						<p class="mini1 color2">東京都品川区XXXX</p>
-
-						<span class="icon"><a href="#">全室禁煙</a></span>
-						<span class="icon"><a href="#">ご予約可</a></span>
-						<span class="icon"><a href="#">駐車場あり</a></span>
-
-						<p><a href="item.html" class="btn2">詳細をみる</a></p>
-
-					</div>
-					<!--/.text-->
-
-					<p class="date"><span>■登録日:2019/03/03 20:18</span><span>■更新日:2019/03/14 10:37</span></p>
-
-					<p class="name"><a href="item.html">サンプル飲食店</a></p>
-					<!--{/def}-->
-
-				</div>
-				<!--/.list-->
-
-				<div class="list">
-
-					<p class="img"><a href="item.html"><img src="<?php echo get_template_directory_uri(); ?>/images/sample_foods1.jpg" alt="タイトル"></a></p>
-
-					<div class="text">
-
-						<h4><a href="item.html">タイトル</a><span class="option2">option2</span></h4>
-
-						<p class="mb10">右上の「option2」の文字情報はhtml側で直接変更できます。<br>
-							<span style="color:red">&lt;span class=&quot;option2&quot;&gt;option2&lt;/span&gt;</span><br>
-							色はcssフォルダのstyle.cssの設定で変更できます。</p>
-
-						<p class="mini1 color2">東京都品川区XXXX</p>
-
-						<span class="icon"><a href="#">全室禁煙</a></span>
-						<span class="icon"><a href="#">ご予約可</a></span>
-						<span class="icon"><a href="#">駐車場あり</a></span>
-
-						<p><a href="item.html" class="btn2">詳細をみる</a></p>
-
-					</div>
-					<!--/.text-->
-
-					<p class="date"><span>■登録日:2019/03/03 20:18</span><span>■更新日:2019/03/14 10:37</span></p>
-
-					<p class="name"><a href="item.html">サンプル飲食店</a></p>
-					<!--{/def}-->
-
-				</div>
-				<!--/.list-->
 
 			</section>
 
