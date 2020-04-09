@@ -44,10 +44,10 @@
 					wp_list_categories($args); ?>
         </ul>
       </li>
-      <li><a href="<?php echo get_template_directory_uri(); ?>/info.html">掲載のご案内<span>Information</span></a></li>
-      <li><a href="<?php echo get_template_directory_uri(); ?>/faq.html">よく頂く質問<span>Faq</span></a></li>
-      <li><a href="<?php echo get_template_directory_uri(); ?>/link.html">リンク<span>Link</span></a></li>
-      <li><a href="<?php echo get_template_directory_uri(); ?>/contact.html">お問い合わせ<span>Contact</span></a></li>
+      <li><a href="<?php echo get_permalink(33); ?>">掲載のご案内<span>Information</span></a></li>
+      <li><a href="<?php echo get_permalink(35); ?>">よく頂く質問<span>Faq</span></a></li>
+      <li><a href="<?php echo get_permalink(38); ?>">リンク<span>Link</span></a></li>
+      <li><a href="<?php echo get_permalink(42); ?>">お問い合わせ<span>Contact</span></a></li>
     </ul>
   </nav>
   <!--小さな端末用（900px以下端末）メニュー-->
