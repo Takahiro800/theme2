@@ -221,3 +221,4 @@
 
 </div>
 <!--/#contents-->
+<?php get_footer(); ?>
