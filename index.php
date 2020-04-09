@@ -15,16 +15,17 @@
 			<section>
 				<h2>地域の情報検索サイト</h2>
 				<ul class="list2">
-					<li><a href="list_foods.html"><img src="<?php echo get_template_directory_uri(); ?>/images/mark_foods.png" alt="" class="img">飲食店を調べる<br><span>XX件</span></a></li>
-					<li><a href="list_job.html"><img src="<?php echo get_template_directory_uri(); ?>/images/mark_job.png" alt="" class="img">求人情報を探す<br><span>XX件</span></a></li>
-					<li><a href="list_clinic.html"><img src="<?php echo get_template_directory_uri(); ?>/images/mark_clinic.png" alt="" class="img">病院を探す<br><span>XX件</span></a></li>
-					<li><a href="list_scool.html"><img src="<?php echo get_template_directory_uri(); ?>/images/mark_school.png" alt="" class="img">習い事を探す<br><span>XX件</span></a></li>
+					<li><a href="list_foods.html"><img src="<?php echo get_template_directory_uri(); ?>/images/mark_foods.png" alt="" class="img"><?php echo get_category(2) -> name; ?>を調べる<br><span><?php echo get_category(2) -> category_count; ?>件</span></a></li>
+					<li><a href="list_job.html"><img src="<?php echo get_template_directory_uri(); ?>/images/mark_job.png" alt="" class="img">求人情報を探す<br><span><?php echo get_category(3) -> count ?>件</span></a></li>
+					<li><a href="list_clinic.html"><img src="<?php echo get_template_directory_uri(); ?>/images/mark_clinic.png" alt="" class="img">病院を探す<br><span><?php echo get_category(4) -> count ?>件</span></a></li>
+					<li><a href="list_scool.html"><img src="<?php echo get_template_directory_uri(); ?>/images/mark_school.png" alt="" class="img">習い事を探す<br><span><?php echo get_category(5) -> count ?>件</span></a></li>
+
 				</ul>
 
 				<h2>地域の不動産情報</h2>
 				<ul class="list2">
-					<li><a href="list_fudosan.html"><img src="<?php echo get_template_directory_uri(); ?>/images/mark_fudosan.png" alt="" class="img">不動産情報（売買）<br><span>XX件</span></a></li>
-					<li><a href="list_chintai.html"><img src="<?php echo get_template_directory_uri(); ?>/images/mark_fudosan.png" alt="" class="img">不動産情報（賃貸）<br><span>XX件</span></a></li>
+					<li><a href="list_fudosan.html"><img src="<?php echo get_template_directory_uri(); ?>/images/mark_fudosan.png" alt="" class="img">不動産情報（売買）<br><span><?php echo get_category(7) -> count ?>件</span></a></li>
+					<li><a href="list_chintai.html"><img src="<?php echo get_template_directory_uri(); ?>/images/mark_fudosan.png" alt="" class="img">不動産情報（賃貸）<br><span><?php echo get_category(8) -> count ?>件</span></a></li>
 				</ul>
 
 			</section>
