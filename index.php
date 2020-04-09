@@ -15,7 +15,7 @@
 			<section>
 				<h2>地域の情報検索サイト</h2>
 				<ul class="list2">
-					<li><a href="list_foods.html"><img src="<?php echo get_template_directory_uri(); ?>/images/mark_foods.png" alt="" class="img"><?php echo get_category(2)->name; ?>を調べる<br><span><?php echo get_category(2)->category_count; ?>件</span></a></li>
+					<li><a href="<?php echo get_category_link(2); ?>"><img src="<?php echo get_template_directory_uri(); ?>/images/mark_foods.png" alt="" class="img"><?php echo get_category(2)->name; ?>を調べる<br><span><?php echo get_category(2)->category_count; ?>件</span></a></li>
 					<li><a href="list_job.html"><img src="<?php echo get_template_directory_uri(); ?>/images/mark_job.png" alt="" class="img">求人情報を探す<br><span><?php echo get_category(3)->count ?>件</span></a></li>
 					<li><a href="list_clinic.html"><img src="<?php echo get_template_directory_uri(); ?>/images/mark_clinic.png" alt="" class="img">病院を探す<br><span><?php echo get_category(4)->count ?>件</span></a></li>
 					<li><a href="list_scool.html"><img src="<?php echo get_template_directory_uri(); ?>/images/mark_school.png" alt="" class="img">習い事を探す<br><span><?php echo get_category(5)->count ?>件</span></a></li>
@@ -60,64 +60,49 @@
 				<h2>新着 不動産情報</h2>
 
 				<h3>売買物件</h3>
-
-				<div class="list-compact">
-					<p class="img"><a href="item.html"><img src="<?php echo get_template_directory_uri(); ?>/images/sample_fudosan1.jpg" alt=""></a></p>
-					<h4><a href="item.html">タイトル</a></h4>
-					<p>ここに簡単な説明を入れます。サンプルテキスト。</p>
-					<p class="name"><a href="item.html">サンプル不動産</a></p>
-				</div>
-
-				<div class="list-compact">
-					<p class="img"><a href="item.html"><img src="<?php echo get_template_directory_uri(); ?>/images/sample_fudosan1.jpg" alt=""></a></p>
-					<h4><a href="item.html">タイトル</a></h4>
-					<p>ここに簡単な説明を入れます。サンプルテキスト。</p>
-					<p class="name"><a href="item.html">サンプル不動産</a></p>
-				</div>
-
-				<div class="list-compact">
-					<p class="img"><a href="item.html"><img src="<?php echo get_template_directory_uri(); ?>/images/sample_fudosan1.jpg" alt=""></a></p>
-					<h4><a href="item.html">タイトル</a></h4>
-					<p>ここに簡単な説明を入れます。サンプルテキスト。</p>
-					<p class="name"><a href="item.html">サンプル不動産</a></p>
-				</div>
-
-				<div class="list-compact">
-					<p class="img"><a href="item.html"><img src="<?php echo get_template_directory_uri(); ?>/images/sample_fudosan1.jpg" alt=""></a></p>
-					<h4><a href="item.html">タイトル</a></h4>
-					<p>ここに簡単な説明を入れます。サンプルテキスト。</p>
-					<p class="name"><a href="item.html">サンプル不動産</a></p>
-				</div>
+				<?php
+				$args = array(
+					'category' => 7,
+					'posts_per_page' => 4,
+					'orderby' => 'date',
+				);
+				$posts_array = get_posts($args);
+				global $post;
+				if ($posts_array) :
+					foreach ($posts_array as $post) : setup_postdata($post); ?>
+						<div class="list-compact">
+							<p class="img"><a href="<?php the_permalink(); ?>"><img src="<?php echo get_template_directory_uri(); ?>/images/sample_fudosan1.jpg" alt=""></a></p>
+							<h4><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h4>
+							<?php the_excerpt(); ?>
+							<p class="name"><a href="item.html">サンプル不動産</a></p>
+						</div>
+				<?php endforeach;
+				endif;
+				wp_reset_postdata();
+				?>
 
 				<h3>賃貸物件</h3>
+				<?php
+				$args = array(
+					'category' => 8,
+					'posts_per_page' => 4,
+					'orderby' => 'date',
+				);
+				$posts_array = get_posts($args);
+				global $post;
+				if ($posts_array) :
+					foreach ($posts_array as $post) : setup_postdata($post); ?>
+						<div class="list-compact">
+							<p class="img"><a href="<?php the_permalink(); ?>"><img src="<?php echo get_template_directory_uri(); ?>/images/sample_fudosan2.jpg" alt=""></a></p>
+							<h4><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h4>
+							<?php the_excerpt(); ?>
+							<p class="name"><a href="item.html">サンプル不動産</a></p>
+						</div>
+				<?php endforeach;
+				endif;
+				wp_reset_postdata();
+				?>
 
-				<div class="list-compact">
-					<p class="img"><a href="item.html"><img src="<?php echo get_template_directory_uri(); ?>/images/sample_fudosan2.jpg" alt=""></a></p>
-					<h4><a href="item.html">タイトル</a></h4>
-					<p>ここに簡単な説明を入れます。サンプルテキスト。</p>
-					<p class="name"><a href="item.html">サンプル不動産</a></p>
-				</div>
-
-				<div class="list-compact">
-					<p class="img"><a href="item.html"><img src="<?php echo get_template_directory_uri(); ?>/images/sample_fudosan2.jpg" alt=""></a></p>
-					<h4><a href="item.html">タイトル</a></h4>
-					<p>ここに簡単な説明を入れます。サンプルテキスト。</p>
-					<p class="name"><a href="item.html">サンプル不動産</a></p>
-				</div>
-
-				<div class="list-compact">
-					<p class="img"><a href="item.html"><img src="<?php echo get_template_directory_uri(); ?>/images/sample_fudosan2.jpg" alt=""></a></p>
-					<h4><a href="item.html">タイトル</a></h4>
-					<p>ここに簡単な説明を入れます。サンプルテキスト。</p>
-					<p class="name"><a href="item.html">サンプル不動産</a></p>
-				</div>
-
-				<div class="list-compact">
-					<p class="img"><a href="item.html"><img src="<?php echo get_template_directory_uri(); ?>/images/sample_fudosan2.jpg" alt=""></a></p>
-					<h4><a href="item.html">タイトル</a></h4>
-					<p>ここに簡単な説明を入れます。サンプルテキスト。</p>
-					<p class="name"><a href="item.html">サンプル不動産</a></p>
-				</div>
 
 			</section>
 
