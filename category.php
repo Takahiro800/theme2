@@ -52,7 +52,7 @@
 		<!--/#main-->
 
 		<div id="sub">
-			<?php get_template_part('template-parts', 'sub'); ?>
+			<?php get_template_part('template-parts/loop', 'sub'); ?>
 		</div>
 		<!--/#sub-->
 
@@ -60,7 +60,7 @@
 	<!--/#contents-in-->
 
 	<div id="side">
-		<?php get_template_part('template-parts', 'side'); ?>
+		<?php get_template_part('template-parts/loop', 'side'); ?>
 	</div>
 	<!--/#side-->
 
