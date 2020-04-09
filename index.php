@@ -15,17 +15,17 @@
 			<section>
 				<h2>地域の情報検索サイト</h2>
 				<ul class="list2">
-					<li><a href="list_foods.html"><img src="<?php echo get_template_directory_uri(); ?>/images/mark_foods.png" alt="" class="img"><?php echo get_category(2) -> name; ?>を調べる<br><span><?php echo get_category(2) -> category_count; ?>件</span></a></li>
-					<li><a href="list_job.html"><img src="<?php echo get_template_directory_uri(); ?>/images/mark_job.png" alt="" class="img">求人情報を探す<br><span><?php echo get_category(3) -> count ?>件</span></a></li>
-					<li><a href="list_clinic.html"><img src="<?php echo get_template_directory_uri(); ?>/images/mark_clinic.png" alt="" class="img">病院を探す<br><span><?php echo get_category(4) -> count ?>件</span></a></li>
-					<li><a href="list_scool.html"><img src="<?php echo get_template_directory_uri(); ?>/images/mark_school.png" alt="" class="img">習い事を探す<br><span><?php echo get_category(5) -> count ?>件</span></a></li>
+					<li><a href="list_foods.html"><img src="<?php echo get_template_directory_uri(); ?>/images/mark_foods.png" alt="" class="img"><?php echo get_category(2)->name; ?>を調べる<br><span><?php echo get_category(2)->category_count; ?>件</span></a></li>
+					<li><a href="list_job.html"><img src="<?php echo get_template_directory_uri(); ?>/images/mark_job.png" alt="" class="img">求人情報を探す<br><span><?php echo get_category(3)->count ?>件</span></a></li>
+					<li><a href="list_clinic.html"><img src="<?php echo get_template_directory_uri(); ?>/images/mark_clinic.png" alt="" class="img">病院を探す<br><span><?php echo get_category(4)->count ?>件</span></a></li>
+					<li><a href="list_scool.html"><img src="<?php echo get_template_directory_uri(); ?>/images/mark_school.png" alt="" class="img">習い事を探す<br><span><?php echo get_category(5)->count ?>件</span></a></li>
 
 				</ul>
 
 				<h2>地域の不動産情報</h2>
 				<ul class="list2">
-					<li><a href="list_fudosan.html"><img src="<?php echo get_template_directory_uri(); ?>/images/mark_fudosan.png" alt="" class="img">不動産情報（売買）<br><span><?php echo get_category(7) -> count ?>件</span></a></li>
-					<li><a href="list_chintai.html"><img src="<?php echo get_template_directory_uri(); ?>/images/mark_fudosan.png" alt="" class="img">不動産情報（賃貸）<br><span><?php echo get_category(8) -> count ?>件</span></a></li>
+					<li><a href="list_fudosan.html"><img src="<?php echo get_template_directory_uri(); ?>/images/mark_fudosan.png" alt="" class="img">不動産情報（売買）<br><span><?php echo get_category(7)->count ?>件</span></a></li>
+					<li><a href="list_chintai.html"><img src="<?php echo get_template_directory_uri(); ?>/images/mark_fudosan.png" alt="" class="img">不動産情報（賃貸）<br><span><?php echo get_category(8)->count ?>件</span></a></li>
 				</ul>
 
 			</section>
@@ -160,12 +160,26 @@
 			<section>
 
 				<h2>新着 習い事情報</h2>
+				<?php
+				$args = array(
+					'category' => 5,
+					'posts_per_page' => 1,
+					'orderby' => 'date',
+				);
+				$posts_array = get_posts($args);
+				global $post;
+				if ($posts_array) :
+					foreach ($posts_array as $post) : setup_postdata($post); ?>
+						<div class="list">
+							<h4><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h4>
+							<p><?php the_excerpt(); ?></p>
+							<p class="name"><a href="<?php the_permalink(); ?>">サンプルお稽古</a></p>
+						</div>
+				<?php endforeach;
+				endif;
+				wp_reset_postdata();
+				?>
 
-				<div class="list">
-					<h4><a href="item.html">タイトル</a></h4>
-					<p>ここに簡単な説明を入れます。サンプルテキスト。</p>
-					<p class="name"><a href="item.html">サンプルお稽古</a></p>
-				</div>
 
 			</section>
 
