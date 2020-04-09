@@ -33,24 +33,13 @@
 			<section id="new">
 				<h2>更新情報・お知らせ</h2>
 				<dl>
-					<dt>2019/12/12</dt>
-					<dd>style.cssの900pxと480px以下の両方に「.sh {display:block;}」と「.pc {display:none;}」が入ってしまっていたので480px以下の方は削除しました。※そのままでも問題は出ないと思います。<span class="newicon">NEW</span></dd>
-					<dt>2019/09/20</dt>
-					<dd>list_fudosan_chintai.htmlの日本地図の岡山と島根の場所が逆だったのでmap.cssを修正。</dd>
-					<dt>2019/03/18</dt>
-					<dd>tp_portal1配布開始。</dd>
-					<dt>20XX/00/00</dt>
-					<dd>サンプルテキスト。サンプルテキスト。サンプルテキスト。</dd>
-					<dt>20XX/00/00</dt>
-					<dd>サンプルテキスト。サンプルテキスト。サンプルテキスト。</dd>
-					<dt>20XX/00/00</dt>
-					<dd>サンプルテキスト。サンプルテキスト。サンプルテキスト。</dd>
-					<dt>20XX/00/00</dt>
-					<dd>サンプルテキスト。サンプルテキスト。サンプルテキスト。</dd>
-					<dt>20XX/00/00</dt>
-					<dd>サンプルテキスト。サンプルテキスト。サンプルテキスト。</dd>
-					<dt>20XX/00/00</dt>
-					<dd>サンプルテキスト。サンプルテキスト。サンプルテキスト。</dd>
+					<?php
+					$args = array('posts_per_page' => 10, 'orderby' => 'date', 'order' => 'DESC');
+					$postslist = get_posts($args);
+					foreach ($postslist as $post) : setup_postdata($post); ?>
+						<dt><?php the_time('Y/m/j'); ?></dt>
+						<dd>記事「<?php the_title(); ?>」を追加しました。</dd>
+					<?php endforeach; ?>
 				</dl>
 				<p class="r">&raquo;&nbsp;<a href="#">過去ログ</a></p>
 			</section>
