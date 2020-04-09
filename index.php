@@ -121,43 +121,78 @@
 
 			</section>
 
-			<section>
+			<section class="新着求人情報">
 
 				<h2>新着 求人情報</h2>
-
-				<div class="list">
-					<h4><a href="item.html">タイトル</a></h4>
-					<p>ここに簡単な説明を入れます。サンプルテキスト。</p>
-					<p class="name"><a href="item.html">サンプル求人</a></p>
-				</div>
-
+				<?php
+				$args = array(
+					'category' => 3,
+					'posts_per_page' => 1,
+					'orderby' => 'date',
+				);
+				$posts_array = get_posts($args);
+				global $post;
+				if ($posts_array) :
+					foreach ($posts_array as $post) : setup_postdata($post); ?>
+						<div class="list">
+							<h4><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h4>
+							<p><?php the_excerpt(); ?></p>
+						</div>
+				<?php endforeach;
+				endif;
+				wp_reset_postdata();
+				?>
 			</section>
 
-			<section>
+			<section class="新着飲食店情報">
 
 				<h2>新着 飲食店情報</h2>
-
-				<div class="list">
-					<h4><a href="item.html">タイトル</a></h4>
-					<p>ここに簡単な説明を入れます。サンプルテキスト。</p>
-					<p class="name"><a href="item.html">サンプル飲食店</a></p>
-				</div>
+				<?php
+				$args = array(
+					'category' => 2,
+					'posts_per_page' => 1,
+					'orderby' => 'date',
+				);
+				$posts_array = get_posts($args);
+				global $post;
+				if ($posts_array) :
+					foreach ($posts_array as $post) : setup_postdata($post); ?>
+						<div class="list">
+							<h4><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h4>
+							<p><?php the_excerpt(); ?></p>
+						</div>
+				<?php endforeach;
+				endif;
+				wp_reset_postdata();
+				?>
 
 			</section>
 
-			<section>
+			<section class="新着病院情報">
 
 				<h2>新着 病院情報</h2>
-
-				<div class="list">
-					<h4><a href="item.html">タイトル</a></h4>
-					<p>ここに簡単な説明を入れます。サンプルテキスト。</p>
-					<p class="name"><a href="item.html">サンプルクリニック</a></p>
-				</div>
-
+				<?php
+				$args = array(
+					'category' => 4,
+					'posts_per_page' => 1,
+					'orderby' => 'date',
+				);
+				$posts_array = get_posts($args);
+				global $post;
+				if ($posts_array) :
+					foreach ($posts_array as $post) : setup_postdata($post); ?>
+						<div class="list">
+							<h4><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h4>
+							<p><?php the_excerpt(); ?></p>
+							<p class="name"><a href="<?php the_permalink(); ?>">サンプルお稽古</a></p>
+						</div>
+				<?php endforeach;
+				endif;
+				wp_reset_postdata();
+				?>
 			</section>
 
-			<section>
+			<section class="新着習い事情報">
 
 				<h2>新着 習い事情報</h2>
 				<?php
