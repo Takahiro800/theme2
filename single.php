@@ -12,7 +12,15 @@
 
 					<article class="item">
 
-						<h2><?php the_title(); ?><span class="new">NEW</span><span class="option1"><?php the_tags(); ?></span><span class="option2">オプション2</span></h2>
+						<h2><?php the_title(); ?>
+
+							<?php if (check_new_post(get_post_time('Y-m-d'))) : ?>
+								<span class="new">NEW</span>
+							<?php endif; ?>
+							<?php if (has_tag('禁煙')) : ?>
+								<span class="option1"><?php the_tags(''); ?></span>
+							<?php endif; ?>
+							<span class="option2">オプション2</span></h2>
 						<p>詳細ページは飲食店用しか梱包していません。必要に応じてそれぞれの詳細ページを準備して下さい。</p>
 
 						<figure class="c mb15"><img src="<?php echo get_template_directory_uri(); ?>/images/sample_foods1.jpg" alt="タイトル"></figure>
